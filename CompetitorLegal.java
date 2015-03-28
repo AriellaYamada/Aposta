@@ -28,7 +28,7 @@ public class CompetitorLegal implements Competitor {
    }
    
    public void addCash (double amount) {
-       
+       total_amount += (2 * amount);
    }
    
    public double getTotalCash() {

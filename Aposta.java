@@ -15,7 +15,10 @@ public class Aposta {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //Aposta começa com cada apostador recebendo 10 reais
+        int n_rounds;
+        int n_CompetitorLegal;
+        
+        
     }
     
 }
