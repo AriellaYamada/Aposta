@@ -19,8 +19,9 @@ public class Competition {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int n_rounds, i;
+        int n_rounds, i, total = 0;
         int[] n_Competitors = new int[5];
+        
         
         InputStreamReader inputStr = new InputStreamReader(System.in);  
           
@@ -29,10 +30,11 @@ public class Competition {
         try {  
             System.out.println("Nº de jogadas:\n");  
             n_rounds = Integer.parseInt(buf.readLine()); 
-            for (i = 0; i < 6; i++)
+            for (i = 0; i < 5; i++)
             {
-                System.out.println("Jogador : " + i + "\n");  
-                n_Competitors[i] = Integer.parseInt(buf.readLine()); 
+                System.out.println("Jogador : " + (i + 1) + "\n");  
+                n_Competitors[i] = Integer.parseInt(buf.readLine());
+                total += n_Competitors[i];
             }
         } catch (IOException e) {             
             System.out.println(e.getMessage());  
