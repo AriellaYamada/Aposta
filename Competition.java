@@ -9,7 +9,7 @@ package br.usp.icmc.ssc01032015;
  *
  * @author ariellayamada
  */
-public class Aposta {
+public class Competition {
 
     /**
      * @param args the command line arguments
