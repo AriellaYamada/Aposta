@@ -26,26 +26,13 @@ public class Competition {
             //Cria um vetor de competidores de cada tipo
             //Podemos fazer um pra cada tipo, no caso,
             //CompetitorLegal seria só um teste de um competidor
-            CompetitorLegal[] comp = new CompetitorLegal[total];
+            CompetitorLegal[] comp = new CompetitorLegal[n_Competitors[0]];
 
             for (i = 0; i < total; i++) {
                 //Percorre todos os tipos de jogadores
                 for (j = 0; j < 5; j++) {
-                    switch (j) {
-                        case 0:
-                            comp[i] = new CompetitorLegal();
-                    }
-
-                //teste
-                /*
-                     //Percorre cada jogador
-                     for (k = 0; k < n_Competitors[j]; k++) {
-                     //Cria o jogador e classifica-o
-                     comp[k] = new CompetitorLegal();
-                     comp[k].type_competitor = j + 1;
-
-                     }
-                     */
+                    comp[i] = new CompetitorLegal();
+                    comp[i].type = j;
                 }
             }
 
@@ -55,6 +42,8 @@ public class Competition {
                 for (j = 0; j < total; j++) {
                     //Percorre todos os adversários
                     for (k = (j + 1); k < (total - 1); k++) {
+                        Bet round = new Bet();
+                        round.round(comp[j], comp[k]);
 
                     }
 
