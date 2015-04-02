@@ -5,13 +5,8 @@ public class CompetitorLegal implements Competitor {
     
    public int type;
    private double total_amount;
+   private List competitors;
    //private double donation;
-   
-   
-   public CompetitorLegal ()
-   {
-       total_amount = 0;   
-   }
    
    public double declareDonationTo(Competitor c) {
        double donation = 0;
@@ -42,6 +37,12 @@ public class CompetitorLegal implements Competitor {
    }
    
    public void informDonationFrom(Competitor c, double donation) {
+       
+       Node n = new Node();
+       n.c = c;
+       n.donation = donation;
+       
+       competitors.add(competitors, n);
        
        
        
