@@ -4,26 +4,37 @@ package br.usp.icmc.ssc01032015;
 public class List {
     
     public Node begin;
-    
     public Node last;
     public int size;
     
-    public void add (List l, Node n) {
-        Node aux = l.begin, ant = l.begin;
-        if (size == 0) {
-            l.begin = n;
-            l.last = n;
+    public boolean empty() {
+        if (begin == null) return true;
+        return false;
+    }
+    
+    public void push (Competitor c, double donation) {
+        Node n = new Node();
+        n.competitor = c;
+        n.donation = donation;
+        
+        if(size == 0) {
+            begin = n;
         } else {
-            while (aux.donation < n.donation || aux != null) {
-                ant = aux;
-                aux = aux.next;
-            }
-            ant.next = n;
-            n.next = aux; 
-            if (aux == null) {
-                l.last = n;
-            }
+            last.next = n;
         }
-        l.size++;
+        
+        last = n;
+        size++;
+    }
+    
+    public Node pop () {
+        
+        Node aux = begin;
+        begin = aux.next;
+        
+        size--;
+        
+        return aux;
+        
     }
 }

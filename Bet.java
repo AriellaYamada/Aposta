@@ -13,8 +13,8 @@ public class Bet {
         b.informDonationFrom(a, db);
 
         //Recebe os valores 
-        a.addCash((10 - da) + (2 * db));
-        b.addCash((10 - db) + (2 * da));
+        //a.addCash((10 - da) + (2 * db));
+        //b.addCash((10 - db) + (2 * da));
 
     }
 

@@ -22,7 +22,7 @@ public class Competition {
                 n_Competitors[i] = Integer.parseInt(buf.readLine());
                 total += n_Competitors[i];
             }
-
+            System.out.println(total + "\n");
             //Cria um vetor de competidores de cada tipo
             //Podemos fazer um pra cada tipo, no caso,
             //CompetitorLegal seria só um teste de um competidor
@@ -36,7 +36,6 @@ public class Competition {
                     k++;
 
                 }
-
             }
 
             //Percorre todas as rodadas
@@ -45,18 +44,23 @@ public class Competition {
                 for (j = 0; j < total; j++) {
                     //Percorre todos os adversários
                     for (k = (j + 1); k < (total - 1); k++) {
-                        Bet round = new Bet();
-                        round.round(comp[j], comp[k]);
+                       // Bet b = new Bet();
+                        //b.round(comp[j], comp[k]);
+                        double da = comp[j].declareDonationTo(comp[k]);
+                        double db = comp[k].declareDonationTo(comp[j]);
 
+                        //Informa a doação de cada competidor
+                        comp[j].informDonationFrom(comp[k], da);
+                        comp[k].informDonationFrom(comp[j], db);
                     }
 
                 }
-            }
+            }/*
             
-            Ranking results = new Ranking();
-            results.quicksort(comp, 0, (total - 1));
-            results.print_results(comp, total);
-            
+            //Ranking results = new Ranking();
+            //results.quicksort(comp, 0, (total - 1));
+            //results.print_results(comp, total);
+            */
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }

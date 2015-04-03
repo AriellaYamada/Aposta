@@ -5,7 +5,7 @@ public class CompetitorLegal implements Competitor {
     
    public int type;
    private double total_amount;
-   private List competitors;
+   private List competitors = new List();
    //private double donation;
    
    public double declareDonationTo(Competitor c) {
@@ -13,38 +13,36 @@ public class CompetitorLegal implements Competitor {
        
        switch (type) {
            case 1:
-               Type1 b = new Type1();
-               donation = b.donation(c);
+               Type1 a = new Type1();
+               donation = a.donation(c);
                break;
            case 2:
-               donation = Type2;
+               Type2 b = new Type2();
+               donation = b.donation(c);
                break;
            case 3:
-               donation = Type2;
+               Type3 cc = new Type3();
+               donation = cc.donation(c);
                break;
            case 4:
-               donation = Type2;
+               Type4 d = new Type4();
+               donation = d.donation(c);
                break;
            case 5:
-               donation = Type2;
+               Type5 e = new Type5();
+               donation = e.donation(c);
                break;
                
        }
        
        return donation;
-       
-       
+ 
    }
    
    public void informDonationFrom(Competitor c, double donation) {
        
-       Node n = new Node();
-       n.c = c;
-       n.donation = donation;
        
-       competitors.add(competitors, n);
-       
-       
+       competitors.push(c, donation);
        
    }
    
