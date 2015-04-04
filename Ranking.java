@@ -4,6 +4,7 @@ public class Ranking {
 
     public void swap(Competitor[] c, int a, int b) {
         Competitor aux = c[a];
+        System.out.println("Aux :" + aux.getTotalCash());
         c[a] = c[b];
         c[b] = c[a];
     }
@@ -32,10 +33,22 @@ public class Ranking {
         }
     }
     
+    List rank (Competitor[] c, int total) {
+        int i;
+        List r = new List();
+        for (i = 0; i < total; i++) {
+            r.addInOrder(c[i], i);
+        }
+        return r;
+    }
+    
     void print_results (Competitor[] c, int total) {
         int i;
+        List rank = rank(c, total);
+        Node n;
         for (i = 0; i < total; i++) {
-            System.out.println("Competitor: " + i + "Total Amount: " + c[i].getTotalCash() + "\n");
+            n = rank.popEnd();
+            System.out.println("Competitor: " + n.num + " Total Amount: " + n.competitor.getTotalCash() + "\n");
         }
     }
 
