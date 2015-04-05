@@ -1,15 +1,19 @@
 package br.usp.icmc.ssc01032015;
 
+import java.util.Locale;
+
 public class Ranking {
 
-    public void swap(Competitor[] c, int a, int b) {
-        Competitor aux = c[a];
-        System.out.println("Aux :" + aux.getTotalCash());
-        c[a] = c[b];
-        c[b] = c[a];
+    public void swap(CompetitorLegal[] c, int a, int b) {
+        CompetitorLegal aux = new CompetitorLegal();
+        aux.copyCompetitor(c[a]);
+        
+        //System.out.println("Aux :" + aux.getTotalCash());
+        c[a].copyCompetitor(c[b]);
+        c[b].copyCompetitor(aux);
     }
 
-    public int partition(Competitor[] c, int left, int right) {
+    public int partition(CompetitorLegal[] c, int left, int right) {
         int j, i = left;
 
         for (j = i + 1; j <= right; j++) {	// n-1
@@ -23,7 +27,7 @@ public class Ranking {
         return i;
     }
 
-    void quicksort(Competitor[] c, int left, int right) {
+    void quicksort(CompetitorLegal[] c, int left, int right) {
         int pivo;
 
         if (left < right) {
@@ -33,7 +37,7 @@ public class Ranking {
         }
     }
     
-    List rank (Competitor[] c, int total) {
+    List rank (CompetitorLegal[] c, int total) {
         int i;
         List r = new List();
         for (i = 0; i < total; i++) {
@@ -42,13 +46,11 @@ public class Ranking {
         return r;
     }
     
-    void print_results (Competitor[] c, int total) {
+    void print_results (CompetitorLegal[] c, int total) {
         int i;
-        List rank = rank(c, total);
-        Node n;
-        for (i = 0; i < total; i++) {
-            n = rank.popEnd();
-            System.out.println("Competitor: " + n.num + " Total Amount: " + n.competitor.getTotalCash() + "\n");
+  
+        for (i = total; i > 0; i--) {
+            System.out.println("Type: " + c[i - 1].type + " Total Amount: " + Double.valueOf(String.format(Locale.US, "%.2f", c[i - 1].getTotalCash())) + "\n");
         }
     }
 

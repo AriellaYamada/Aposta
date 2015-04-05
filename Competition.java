@@ -27,17 +27,16 @@ public class Competition {
             //Podemos fazer um pra cada tipo, no caso,
             //CompetitorLegal seria só um teste de um competidor
             CompetitorLegal[] comp = new CompetitorLegal[total];
-            System.out.println("teste");
+            
             //Percorre todos os tipos de jogadores
             for (j = 0; j < 5; j++) {
                 for (i = 0; i < n_Competitors[j]; i++) {
-                    comp[k] = new CompetitorLegal();
+                    comp[k] = new CompetitorLegal() {};
                     comp[k].type = j + 1;
                     k++;
 
                 }
             }
-            System.out.println("teste2");
 
             //Percorre todas as rodadas
             for (i = 0; i < n_rounds; i++) {
@@ -45,16 +44,17 @@ public class Competition {
                 for (j = 0; j < total; j++) {
                     //Percorre todos os adversários
                     for (k = (j + 1); k < total; k++) {
-                        System.out.println("teste round");
+                        
                        Bet b = new Bet();
                        b.round(comp[j], comp[k]);
                         
                     }
                 }
             }
-            System.out.println("teste3");
+            
+            //Cria o ranking
             Ranking results = new Ranking();
-            //results.quicksort(comp, 0, (total - 1));
+            results.quicksort(comp, 0, (total - 1));
             results.print_results(comp, total);
             
         } catch (IOException e) {

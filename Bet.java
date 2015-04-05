@@ -13,8 +13,6 @@ public class Bet {
         a.informDonationFrom(b, da);
         b.informDonationFrom(a, db);
         
-
-        System.out.println(da + " " + db + "\n");
         //Recebe os valores 
         a.addCash((10 - da) + (2 * db));
         b.addCash((10 - db) + (2 * da));

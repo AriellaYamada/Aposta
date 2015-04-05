@@ -48,7 +48,7 @@ public class List {
         return aux;
     }
 
-    public void addInOrder(Competitor c, int p) {
+    public void addInOrder(CompetitorLegal c, int p) {
         Node aux, ant;
         aux = begin;
         ant = begin;

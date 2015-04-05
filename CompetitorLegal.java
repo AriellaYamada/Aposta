@@ -54,4 +54,9 @@ public class CompetitorLegal implements Competitor {
        return total_amount;
        
    }   
+   
+   public void copyCompetitor(CompetitorLegal c) {
+       type = c.type;
+       total_amount = c.getTotalCash();
+   }
 }
