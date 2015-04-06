@@ -1,5 +1,13 @@
 package br.usp.icmc.ssc01032015;
 
+/**
+ * Trabalho 1 de POO
+ *
+ * Ariella Yamada Brambila			|	NUSP: 8937034
+ * Carlos Alberto Schneider Junior	|	NUSP: 9167910
+ * MÃ¡rcio de Souza Campos			|	NUSP: 8937462
+ */
+
 import java.util.*;
 
 public class Main {
@@ -7,10 +15,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Lê o numero de rodadas
+        // Lï¿½ o numero de rodadas
         int rounds = scanner.nextInt();
 
-        // Lê o número de jogadores de cada tipo
+        // Lï¿½ o nï¿½mero de jogadores de cada tipo
         int A = scanner.nextInt();
         int B = scanner.nextInt();
         int C = scanner.nextInt();

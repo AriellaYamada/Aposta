@@ -1,7 +1,11 @@
 package br.usp.icmc.ssc01032015;
 
 /**
- * Created by Márcio on 01/04/2015.
+ * Trabalho 1 de POO
+ *
+ * Ariella Yamada Brambila			|	NUSP: 8937034
+ * Carlos Alberto Schneider Junior	|	NUSP: 9167910
+ * MÃ¡rcio de Souza Campos			|	NUSP: 8937462
  */
 public class CompetitorA extends Player {
     public CompetitorA() {
@@ -21,6 +25,6 @@ public class CompetitorA extends Player {
         weight[0]++;
         updateControl(0);
 
-        return this.donation;   // Retorna o valor que deve ser doado à c
+        return this.donation;   // Retorna o valor que deve ser doado ï¿½ c
     }
 }

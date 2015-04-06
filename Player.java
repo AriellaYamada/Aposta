@@ -1,20 +1,24 @@
 package br.usp.icmc.ssc01032015;
 
 /**
- * Created by Márcio on 01/04/2015.
+ * Trabalho 1 de POO
+ *
+ * Ariella Yamada Brambila			|	NUSP: 8937034
+ * Carlos Alberto Schneider Junior	|	NUSP: 9167910
+ * MÃ¡rcio de Souza Campos			|	NUSP: 8937462
  */
 public class Player implements Competitor, Comparable <Player> {
-    // Vetor que vai ser usado para controlar as estratégias
+    // Vetor que vai ser usado para controlar as estratï¿½gias
     public static int[] weight = {0, 0, 0, 0, 0};
     public static int giver = 0, receptor = 0;
 
-    // Variável que recebe o valor a ser doado
+    // Variï¿½vel que recebe o valor a ser doado
     public double donation;
 
-    // Variável que aramazena a quantidade de dinheiro arrecadada
+    // Variï¿½vel que aramazena a quantidade de dinheiro arrecadada
     public double cash;
 
-    // Armazena o valor padrão de doação
+    // Armazena o valor padrï¿½o de doaï¿½ï¿½o
     public double defaultDonation;
 
     // Armazena o nome do tipo da classe
@@ -28,8 +32,8 @@ public class Player implements Competitor, Comparable <Player> {
     }
 
     public double declareDonationTo(Competitor c) {
-        this.donation =  3;     // salva a valor que deve ser doado à c
-        return this.donation;   // Retorna o valor que deve ser doado à c
+        this.donation =  3;     // salva a valor que deve ser doado ï¿½ c
+        return this.donation;   // Retorna o valor que deve ser doado ï¿½ c
     }
 
     public void informDonationFrom(Competitor c, double donation) {

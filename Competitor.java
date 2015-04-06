@@ -1,18 +1,22 @@
 package br.usp.icmc.ssc01032015;
 
 /**
- * Created by Márcio on 01/04/2015.
+ * Trabalho 1 de POO
+ *
+ * Ariella Yamada Brambila			|	NUSP: 8937034
+ * Carlos Alberto Schneider Junior	|	NUSP: 9167910
+ * MÃ¡rcio de Souza Campos			|	NUSP: 8937462
  */
 public interface Competitor {
-    // Indicates how much to donate to Competitor c 
+    //ï¿½Indicatesï¿½howï¿½muchï¿½toï¿½donateï¿½toï¿½Competitorï¿½cï¿½
     double declareDonationTo(Competitor c);
 
-    // Indicates how much was donated from Competitor c 
+    //ï¿½Indicatesï¿½howï¿½muchï¿½wasï¿½donatedï¿½fromï¿½Competitorï¿½cï¿½
     void informDonationFrom(Competitor c, double donation);
 
-    // Adds the amount of cash
+    //ï¿½Addsï¿½theï¿½amountï¿½ofï¿½cash
     void addCash(double amount);
 
-    // Get the amount of cash this competitor has 
+    //ï¿½Getï¿½theï¿½amountï¿½ofï¿½cashï¿½thisï¿½competitorï¿½hasï¿½
     double getTotalCash();
 }
